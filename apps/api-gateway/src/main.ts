@@ -32,7 +32,7 @@ app.use(limiter);
 
 app.use("/api/auth", proxy("http://localhost:6001")); // auth service
 
-app.get("/api", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.send({ message: "Welcome to api-gateway!" });
 });
 
